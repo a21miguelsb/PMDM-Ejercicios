@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SecretAoo</string>
+    <string name="app_name">SecretApp</string>
     <string name="message_text">Introduce aqui tu mensaje...</string>
     <string name="welcome_text">Bienvenido a la app Secret Message! usa esta app para encriptar un mensaje secreto</string>
     <string name="start">Inicio</string>
