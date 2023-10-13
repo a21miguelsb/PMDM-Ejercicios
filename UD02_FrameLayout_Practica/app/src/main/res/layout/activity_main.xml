@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+
+            android:layout_margin="10dp"
+            android:src="@drawable/ourense"
+
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ourense"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+
+            ></TextView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="10dp"
+            android:src="@drawable/catedral"
+
+            >
+
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Santiago"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30"
+
+            ></TextView>
+    </FrameLayout>
+</LinearLayout>
