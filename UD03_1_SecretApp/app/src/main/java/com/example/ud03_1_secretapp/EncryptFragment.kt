@@ -21,10 +21,12 @@ class EncryptFragment : Fragment() {
     }
 
     fun cifrado(mensaje : String) = mensaje.uppercase().map() {
-        var letra = it.code.plus(3)
-        letra.toChar()
-        return@map
+        if (it.isLetter())
+            it.uppercaseChar().code.minus('A'.code).plus(3).mod(26).plus('A'.code).toChar()
 
-    }
+        else
+            it
+
+    }.joinToString("")
 
 }
