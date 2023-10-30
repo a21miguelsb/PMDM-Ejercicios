@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UD04_1_Chat"
+rootProject.name = "UD04_1_ChatApp"
 include(":app")
  

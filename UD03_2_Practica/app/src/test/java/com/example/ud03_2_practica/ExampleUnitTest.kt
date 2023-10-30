@@ -1,4 +1,4 @@
-package com.example.ud04_1_chat
+package com.example.ud03_2_practica
 
 import org.junit.Test
 
