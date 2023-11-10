@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/inboxFragment"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Rutinas"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/messageFragment"
+        android:icon="@drawable/goals"
+        android:title="Objetivos"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/helpFragment"
+        android:icon="@drawable/diet"
+        android:title="Dietas"
+        app:showAsAction="always" />
+</menu>

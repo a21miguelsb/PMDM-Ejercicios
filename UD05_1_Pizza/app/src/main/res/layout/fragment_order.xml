@@ -67,6 +67,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/pizza_type" />
             <RadioGroup
+                android:id="@+id/group_pizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RadioButton
