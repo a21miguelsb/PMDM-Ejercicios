@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 
 class ObjetivesFragment : Fragment() {
@@ -16,6 +18,11 @@ class ObjetivesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_objetives, container, false)
+        val btnNext = view.findViewById<Button>(R.id.new_exercice)
+        btnNext.setOnClickListener{
+            view.findNavController().navigate(R.id.action_objectiveFragment_to_newObjetiveFragment)
+        }
+
         return view
     }
 

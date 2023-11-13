@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/objectiveFragment">
+
+    <fragment
+        android:id="@+id/dietFragment"
+        android:name="com.example.gestorrutinasapp.DietFragment"
+        android:label="fragment_diet"
+        tools:layout="@layout/fragment_diet" />
+    <fragment
+        android:id="@+id/routineFragment"
+        android:name="com.example.gestorrutinasapp.RoutineFragment"
+        android:label="fragment_routine"
+        tools:layout="@layout/fragment_routine" />
+    <fragment
+        android:id="@+id/objectiveFragment"
+        android:name="com.example.gestorrutinasapp.ObjetivesFragment"
+        android:label="ObjetivesFragment" >
+        <action
+            android:id="@+id/action_objectiveFragment_to_newObjetiveFragment"
+            app:destination="@id/newObjetiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newObjetiveFragment"
+        android:name="com.example.gestorrutinasapp.NewObjetiveFragment"
+        android:label="fragment_new_objetive"
+        tools:layout="@layout/fragment_new_objetive" />
+</navigation>

@@ -6,6 +6,7 @@ import android.os.PersistableBundle
 import android.os.SystemClock
 import android.widget.Button
 import android.widget.Chronometer
+import com.example.ud01_3chronos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var chrono: Chronometer
@@ -14,20 +15,28 @@ class MainActivity : AppCompatActivity() {
     val OFFSET_KEY ="offset"
     val BASE_KEY ="base"
     var offSet = 0L
+
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        chrono = findViewById<Chronometer>(R.id.chrono)
+        //setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+
+
+        chrono = binding.chrono
+
+
 
         if (savedInstanceState!=null){
             offSet = savedInstanceState.getLong(OFFSET_KEY)
             running = savedInstanceState.getBoolean(RUNNING_KEY)
             if (running){
-                chrono.base = savedInstanceState.getLong(BASE_KEY)
-                chrono.start()
+                binding.chrono.base = savedInstanceState.getLong(BASE_KEY)
+                binding.chrono.start()
             }
             else{
-                chrono.base=SystemClock.elapsedRealtime()-offSet
+                binding.chrono.base=SystemClock.elapsedRealtime()-offSet
             }
         }
 
@@ -37,23 +46,23 @@ class MainActivity : AppCompatActivity() {
         val btnRestart = findViewById<Button>(R.id.btn_restart)
         btnStart.setOnClickListener {
             if (!running){
-                chrono.base=SystemClock.elapsedRealtime() - offSet
-                chrono.start()
+                binding.chrono.base=SystemClock.elapsedRealtime() - offSet
+                binding.chrono.start()
                 running = true
             }
         }
 
         btnPause.setOnClickListener{
             if (running){
-                chrono.stop()
-                offSet = SystemClock.elapsedRealtime()-chrono.base
+                binding.chrono.stop()
+                offSet = SystemClock.elapsedRealtime()-binding.chrono.base
                 running=false
             }
         }
         btnRestart.setOnClickListener {
                 offSet = 0L
-                chrono.base = SystemClock.elapsedRealtime()
-                chrono.start()
+            binding.chrono.base = SystemClock.elapsedRealtime()
+            binding.chrono.start()
                 running = true
 
         }
@@ -62,14 +71,14 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putBoolean(RUNNING_KEY,running)
         outState.putLong(OFFSET_KEY,offSet)
-        outState.putLong(BASE_KEY,chrono.base)
+        outState.putLong(BASE_KEY,binding.chrono.base)
         super.onSaveInstanceState(outState)
     }
 
     override fun onStop() {
         if (running){
-            offSet = SystemClock.elapsedRealtime() -chrono.base
-            chrono.stop()
+            offSet = SystemClock.elapsedRealtime() -binding.chrono.base
+            binding.chrono.stop()
         }
         super.onStop()
     }

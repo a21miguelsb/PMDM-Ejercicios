@@ -17,29 +17,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c47bd05-c158-4448-9c9b-3a0a17e0ff00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../UD03_2_Practica/app/src/main/res/drawable/bosque.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UD03_2_Practica/app/src/main/res/drawable/casa.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UD03_2_Practica/app/src/main/res/drawable/samain.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/drawable/gato.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/layout/nav_header.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/menu/menu_bottombar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/menu/menu_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/DietFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/RoutineFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_diet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_routine.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_objetives.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_objetives.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UD01_2One_More_Wine" beforeDir="false" afterPath="$PROJECT_DIR$/../UD01_2One_More_Wine" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/androidTest/java/com/example/ud04_1_chat/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/java/com/example/ud04_1_chat/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/app/src/test/java/com/example/ud04_1_chat/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UD04_1_Chat/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../UD04_1_Chat/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,18 +58,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/sanclemente.local/a21miguelsb/AndroidStudioProjects/UD03_1_SecretApp",
-    "memory.settings.postsync.last.time.stamp": "1697714455487",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sanclemente.local/a21miguelsb/AndroidStudioProjects/UD03_1_SecretApp&quot;,
+    &quot;memory.settings.postsync.last.time.stamp&quot;: &quot;1697714455487&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="UD03_1SecretApp.app.main" />
