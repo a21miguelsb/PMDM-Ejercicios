@@ -17,18 +17,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c47bd05-c158-4448-9c9b-3a0a17e0ff00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/DietFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/RoutineFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_diet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_routine.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/java/com/example/gestorrutinasapp/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_objetives.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/layout/fragment_objetives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GestorRutinasApp/app/src/main/res/navigation/graf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/androidTest/java/com/example/ud06_3_guessgame/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/java/com/example/ud06_3_guessgame/GameFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/java/com/example/ud06_3_guessgame/GameViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/java/com/example/ud06_3_guessgame/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/java/com/example/ud06_3_guessgame/ResultFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/layout/fragment_game.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/layout/fragment_result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/app/src/test/java/com/example/ud06_3_guessgame/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UD06_3_GuessGame/settings.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UD01_2One_More_Wine" beforeDir="false" afterPath="$PROJECT_DIR$/../UD01_2One_More_Wine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UD01_3Chronos/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../UD01_3Chronos/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UD03_1_SecretApp/.idea/kotlinScripting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UD03_1_SecretApp/.idea/kotlinScripting.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
