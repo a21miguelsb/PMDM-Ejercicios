@@ -6,4 +6,7 @@
     <string name="exercice_name">Ejercicio</string>
     <string name="exercice_reps">Reps</string>
     <string name="exercice_duration">Tiempo</string>
+    <string name="your_objetives">Tus objetivos</string>
+    <string name="your_routines">Tus rutinas</string>
+    <string name="dietas_txt">Tus dietas</string>
 </resources>
