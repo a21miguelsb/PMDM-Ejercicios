@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Flexify</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_btn">Añadir</string>
     <string name="exercice_name">Ejercicio</string>
     <string name="exercice_reps">Reps</string>
@@ -9,4 +7,6 @@
     <string name="your_objetives">Tus objetivos</string>
     <string name="your_routines">Tus rutinas</string>
     <string name="dietas_txt">Tus dietas</string>
+    <string name="btn_next">Siguiente</string>
+    <string name="routine_name">Nombre</string>
 </resources>
