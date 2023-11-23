@@ -49,43 +49,76 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/texto_dia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dia"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <Spinner
+                    android:id="@+id/spinner_dias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:entries="@array/lista_dias"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Meta:"
-                android:textStyle="italic"
-                android:textSize="20dp"
-                />
+                android:orientation="vertical"
+                android:gravity="center"
+                >
 
+                <TextView
+                    android:id="@+id/texto_numero_obj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Nº de ejercicios"
+                    android:textSize="15dp"
+                    android:textStyle="bold|italic" />
 
+                <EditText
+                    android:id="@+id/num_exercices"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    />
 
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:inputType="textMultiLine"
-               android:maxLines="10"
-
-               />
-
-
-
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/btn_add" />
+            android:text="@string/btn_next"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            />
 
     </LinearLayout>
 </LinearLayout>

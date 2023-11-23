@@ -7,22 +7,39 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TableLayout
-import android.widget.TableRow
+import android.widget.Toast
+import androidx.navigation.findNavController
+import com.example.gestorrutinasapp.databinding.FragmentNewObjetiveBinding
 
 class NewObjetiveFragment : Fragment() {
+
+    private var _binding: FragmentNewObjetiveBinding? = null
+
+    private val binding get()= _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_new_objetive, container, false)
+        _binding= FragmentNewObjetiveBinding.inflate(inflater, container, false)
+        val view = binding.root
+        val textName = binding.nameText.text
+        val btnAdd = binding.btnAdd
 
-        val spinnerDays = view.findViewById<Spinner>(R.id.spinner_dias)
-        spinnerDays
-
+        btnAdd.setOnClickListener {
+            if (textName.isEmpty()){
+                Toast.makeText(requireContext(),"Debes completar los datos!",Toast.LENGTH_SHORT,).show()
+            }
+            else{
+                view.findNavController().navigate(R.id.action_newObjetiveFragment_to_objectiveFragment)
+            }
+        }
         return view
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding=null
+    }
+
 }
 
 

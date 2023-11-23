@@ -6,24 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.gestorrutinasapp.databinding.FragmentDietBinding
+import com.example.gestorrutinasapp.databinding.FragmentNewRoutineExerciceBinding
 
-class DietFragment : Fragment() {
+class NewRoutineExerciceFragment : Fragment() {
 
-    private var _binding: FragmentDietBinding? = null
+    private var _binding: FragmentNewRoutineExerciceBinding? = null
 
     private val binding get()= _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentDietBinding.inflate(inflater,container,false)
+        _binding= FragmentNewRoutineExerciceBinding.inflate(inflater, container, false)
         val view = binding.root
-        // Inflate the layout for this fragment
+
+
         return view
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
     }
-
 }
