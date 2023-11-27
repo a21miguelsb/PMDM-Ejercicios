@@ -1,14 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewRoutineExerciceFragment">
+    tools:context=".NewRoutineExerciceFragment"
+    android:orientation="vertical"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        >
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Ejericico"
+            android:textSize="20dp"
+            />
 
-</FrameLayout>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Reps"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Tiempo"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_exercices1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/exercice_name1"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+
+            />
+
+        <EditText
+            android:id="@+id/exercice_reps1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            />
+        <EditText
+            android:id="@+id/exercice_time1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_exercices2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/exercice_name2"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+
+            />
+
+        <EditText
+            android:id="@+id/exercice_reps2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            />
+        <EditText
+            android:id="@+id/exercice_time2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_exercices3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/exercice_name3"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+
+            />
+
+        <EditText
+            android:id="@+id/exercice_reps3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            />
+        <EditText
+            android:id="@+id/exercice_time3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_exercices4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/exercice_name4"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+
+            />
+
+        <EditText
+            android:id="@+id/exercice_reps4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            />
+        <EditText
+            android:id="@+id/exercice_time4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_exercices5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/exercice_name5"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+
+            />
+
+        <EditText
+            android:id="@+id/exercice_reps5"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            />
+        <EditText
+            android:id="@+id/exercice_time5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_exercices6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/exercice_name6"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+
+            />
+
+        <EditText
+            android:id="@+id/exercice_reps6"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            />
+        <EditText
+            android:id="@+id/exercice_time6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Añadir">
+
+        </Button>
+    </LinearLayout>
+
+
+
+</LinearLayout>

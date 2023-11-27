@@ -1,10 +1,15 @@
 package com.example.gestorrutinasapp
 
+import android.text.Editable
 import androidx.lifecycle.ViewModel
 
 class RoutineViewModel: ViewModel() {
-    val listaRutinas = listOf<String>("Biceps/Espalda","Peito/Triceps")
 
+    var numEjercicios =5
+
+    fun changeNumEx(number: Int){
+        numEjercicios = number
+    }
 
 }
 

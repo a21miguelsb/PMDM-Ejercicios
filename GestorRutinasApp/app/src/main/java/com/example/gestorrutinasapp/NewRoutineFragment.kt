@@ -5,18 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import com.example.gestorrutinasapp.databinding.FragmentDietBinding
 import com.example.gestorrutinasapp.databinding.FragmentNewRoutineBinding
 
 class NewRoutineFragment : Fragment() {
 
 
     private var _binding: FragmentNewRoutineBinding? = null
-
+    val model: RoutineViewModel by viewModels(
+        ownerProducer = {this.requireActivity()}
+    )
     private val binding get()= _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +35,7 @@ class NewRoutineFragment : Fragment() {
                 Toast.makeText(requireContext(),"Debes completar los datos!", Toast.LENGTH_SHORT).show()
             }
             else{
+                model.changeNumEx(numExercices.toString().toInt())
                 view.findNavController().navigate(R.id.action_newRoutineFragment_to_newRoutineExerciceFragment)
             }
         }
