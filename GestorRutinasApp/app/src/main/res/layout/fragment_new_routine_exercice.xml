@@ -6,15 +6,23 @@
     tools:context=".NewRoutineExerciceFragment"
     android:orientation="vertical"
     >
+    <TextView
+        android:id="@+id/routine_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textStyle="bold|italic"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="20dp"
+
         >
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:text="Ejericico"
             android:textSize="20dp"
@@ -23,7 +31,7 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="Reps"
+            android:text="@string/txt_repetitions"
             android:textSize="20dp"
             />
 
@@ -31,7 +39,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:text="Tiempo"
+            android:text="@string/txt_time"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -41,7 +49,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:gravity="center"
         >
 
         <EditText
@@ -72,7 +79,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:gravity="center"
         >
 
         <EditText
@@ -102,7 +108,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:gravity="center"
         >
 
         <EditText
@@ -132,7 +137,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:gravity="center"
         >
 
         <EditText
@@ -162,7 +166,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:gravity="center"
         >
 
         <EditText
@@ -193,7 +196,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:gravity="center"
         >
 
         <EditText
@@ -213,7 +215,6 @@
             android:id="@+id/exercice_time6"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-
             />
 
     </LinearLayout>
@@ -228,7 +229,9 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Añadir">
+            android:text="Añadir"
+            android:layout_marginRight="20dp"
+            >
 
         </Button>
     </LinearLayout>
