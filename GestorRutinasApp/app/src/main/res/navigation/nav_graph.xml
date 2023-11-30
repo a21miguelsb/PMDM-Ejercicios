@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_routineFragment_to_newRoutineFragment"
             app:destination="@id/newRoutineFragment" />
+        <action
+            android:id="@+id/action_routineFragment_to_routineInfoFragment"
+            app:destination="@id/routineInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/objectiveFragment"
@@ -53,4 +56,9 @@
             android:id="@+id/action_newRoutineExerciceFragment_to_routineFragment"
             app:destination="@id/routineFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/routineInfoFragment"
+        android:name="com.example.gestorrutinasapp.RoutineInfoFragment"
+        android:label="fragment_routine_info"
+        tools:layout="@layout/fragment_routine_info" />
 </navigation>

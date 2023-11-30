@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
@@ -28,20 +30,25 @@ class RoutineFragment : Fragment() {
         // Inflate the layout for this fragment
         var lista = binding.listaRutinas
 
+
         if(model.listaRutinas.size!=0){
-
-
             adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, itemList)
             lista.adapter = adapter
 
             for (rutina in model.listaRutinas){
-                itemList.add(rutina.name.uppercase()+"("+rutina.day.toString().lowercase()+")")
-                adapter.notifyDataSetChanged()
+                var item = rutina.name.uppercase()+"("+rutina.day.toString().lowercase()+")"
+                if (!itemList.contains(item)){
+                    itemList.add(item)
+                    adapter.notifyDataSetChanged()
+                }
 
             }
+            lista.setOnItemClickListener { parent, _, position, _ ->
+                val selectedItem = parent.getItemAtPosition(position)
 
-            for (item in itemList){
-                item.
+                view.findNavController().navigate(R.id.action_routineFragment_to_routineInfoFragment)
+
+
             }
 
 
@@ -53,7 +60,6 @@ class RoutineFragment : Fragment() {
 
         btn_next.setOnClickListener {
             view.findNavController().navigate(R.id.action_routineFragment_to_newRoutineFragment)
-
 
         }
         return view

@@ -1,4 +1,4 @@
-package com.example.gestorrutinasapp.clases
+package com.example.gestorrutinasapp.model
 
 class Exercice {
     var name: String

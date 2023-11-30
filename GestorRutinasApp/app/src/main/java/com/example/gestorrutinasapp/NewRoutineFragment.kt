@@ -34,9 +34,10 @@ class NewRoutineFragment : Fragment() {
                 Toast.makeText(requireContext(),"Debes completar los datos!", Toast.LENGTH_SHORT).show()
             }
             else{
-                view.findNavController().navigate(R.id.action_newRoutineFragment_to_newRoutineExerciceFragment)
                 model.setName(binding.nameText.text.toString())
                 model.setDay(binding.spinnerDias.selectedItemPosition )
+                view.findNavController().navigate(R.id.action_newRoutineFragment_to_newRoutineExerciceFragment)
+
             }
         }
         return view
