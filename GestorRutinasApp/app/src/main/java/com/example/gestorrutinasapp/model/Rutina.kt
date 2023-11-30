@@ -1,12 +1,13 @@
 package com.example.gestorrutinasapp.model
 
-class Rutina {
-    var name: String
-    var day: Days
+import com.example.gestorrutinasapp.model.exercice.Exercice
+import javax.inject.Inject
+
+class Rutina @Inject constructor(
+    var name: String,
+    var day: Days,
     var exercices: List<Exercice>
-    constructor(name: String, day: Days, exercices: List<Exercice>) {
-        this.name = name
-        this.day = day
-        this.exercices = exercices
-    }
+) {
+
+
 }

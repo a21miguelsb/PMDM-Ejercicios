@@ -2,16 +2,23 @@ package com.example.gestorrutinasapp
 
 import androidx.lifecycle.ViewModel
 import com.example.gestorrutinasapp.model.Days
-import com.example.gestorrutinasapp.model.Exercice
+import com.example.gestorrutinasapp.model.exercice.Exercice
 import com.example.gestorrutinasapp.model.Rutina
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class RoutineViewModel: ViewModel() {
+@HiltViewModel
+class RoutineViewModel @Inject constructor(
+    var listaRutinas: ArrayList<Rutina>
 
-    var listaRutinas = ArrayList<Rutina>()
+
+) : ViewModel() {
+
 
     var routineName=""
 
     var add=false
+    lateinit var routineInfo: Rutina
     lateinit var  dayRoutine: Days
     fun setName(name: String){
         routineName = name
@@ -33,6 +40,10 @@ class RoutineViewModel: ViewModel() {
     fun saveRutinas(nameRoutine: String,dayRoutine: Days ,exercices: List<Exercice>) {
         listaRutinas.add(Rutina(nameRoutine,dayRoutine,exercices))
 
+    }
+
+    fun setRutina(rutina: Rutina){
+        routineInfo = rutina
     }
 
 

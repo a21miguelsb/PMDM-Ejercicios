@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
@@ -44,7 +42,7 @@ class RoutineFragment : Fragment() {
 
             }
             lista.setOnItemClickListener { parent, _, position, _ ->
-                val selectedItem = parent.getItemAtPosition(position)
+                model.routineInfo= model.listaRutinas.get(position)
 
                 view.findNavController().navigate(R.id.action_routineFragment_to_routineInfoFragment)
 
