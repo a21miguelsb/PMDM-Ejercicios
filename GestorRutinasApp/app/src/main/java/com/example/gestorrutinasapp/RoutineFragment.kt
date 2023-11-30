@@ -1,18 +1,23 @@
 package com.example.gestorrutinasapp
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ArrayAdapter
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import com.example.gestorrutinasapp.databinding.FragmentObjetivesBinding
 import com.example.gestorrutinasapp.databinding.FragmentRoutineBinding
 
 class RoutineFragment : Fragment() {
     private var _binding: FragmentRoutineBinding? = null
     private val binding get()= _binding!!
+    private lateinit var adapter: ArrayAdapter<String>
+    private val itemList = ArrayList<String>()
+    val model: RoutineViewModel by viewModels(
+        ownerProducer = {this.requireActivity()}
+    )
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,8 +26,30 @@ class RoutineFragment : Fragment() {
         _binding= FragmentRoutineBinding.inflate(inflater,container,false)
         val view = binding.root
         // Inflate the layout for this fragment
+        var lista = binding.listaRutinas
 
+        if(model.listaRutinas.size!=0){
+
+
+            adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, itemList)
+            lista.adapter = adapter
+
+            for (rutina in model.listaRutinas){
+                itemList.add(rutina.name.uppercase()+"("+rutina.day.toString().lowercase()+")")
+                adapter.notifyDataSetChanged()
+
+            }
+
+            for (item in itemList){
+                item.
+            }
+
+
+
+        }
         val btn_next = binding.newRoutine
+
+
 
         btn_next.setOnClickListener {
             view.findNavController().navigate(R.id.action_routineFragment_to_newRoutineFragment)
