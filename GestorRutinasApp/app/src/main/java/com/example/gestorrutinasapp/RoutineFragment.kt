@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.gestorrutinasapp.databinding.FragmentRoutineBinding
@@ -15,9 +16,12 @@ class RoutineFragment : Fragment() {
     private val binding get()= _binding!!
     private lateinit var adapter: ArrayAdapter<String>
     private val itemList = ArrayList<String>()
-    val model: RoutineViewModel by viewModels(
-        ownerProducer = {this.requireActivity()}
-    )
+    val model: RoutineViewModel by  activityViewModels {
+        RoutineViewModelFactory(
+            (activity?.application as GestorRutinasApp).databaseRoutine
+                .getRoutineDao()
+        )
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,20 +33,12 @@ class RoutineFragment : Fragment() {
         var lista = binding.listaRutinas
 
 
-        if(model.listaRutinas.size!=0){
             adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, itemList)
             lista.adapter = adapter
 
-            for (rutina in model.listaRutinas){
-                var item = rutina.name.uppercase()+"("+rutina.day.toString().lowercase()+")"
-                if (!itemList.contains(item)){
-                    itemList.add(item)
-                    adapter.notifyDataSetChanged()
-                }
 
-            }
-            lista.setOnItemClickListener { parent, _, position, _ ->
-                model.routineInfo= model.listaRutinas.get(position)
+            lista.setOnItemClickListener { _, _, position, _ ->
+                //model.routineInfo= model.listaRutinas.get(position)
 
                 view.findNavController().navigate(R.id.action_routineFragment_to_routineInfoFragment)
 
@@ -51,7 +47,7 @@ class RoutineFragment : Fragment() {
 
 
 
-        }
+
         val btn_next = binding.newRoutine
 
 

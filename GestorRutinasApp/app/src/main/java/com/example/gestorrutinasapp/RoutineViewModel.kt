@@ -1,23 +1,35 @@
 package com.example.gestorrutinasapp
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.example.gestorrutinasapp.model.Days
 import com.example.gestorrutinasapp.model.exercice.Exercice
-import com.example.gestorrutinasapp.model.Rutina
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
+import com.example.gestorrutinasapp.model.exercice.ExerciceDao
+import com.example.gestorrutinasapp.model.rutina.Rutina
+import com.example.gestorrutinasapp.model.rutina.RoutineDatabase
 
-@HiltViewModel
-class RoutineViewModel @Inject constructor(
-    var listaRutinas: ArrayList<Rutina>
+import kotlinx.coroutines.launch
+import androidx.lifecycle.viewModelScope
+import com.example.gestorrutinasapp.model.rutina.RoutineDao
 
 
-) : ViewModel() {
+class RoutineViewModel(
+    private val routineDao: RoutineDao,
+    ) : ViewModel() {
 
+
+
+    private fun insertExercices(routine: Rutina){
+        viewModelScope.launch {
+                routineDao.insert(routine)
+            }
+
+    }
 
     var routineName=""
 
-    var add=false
+
+
     lateinit var routineInfo: Rutina
     lateinit var  dayRoutine: Days
     fun setName(name: String){
@@ -37,16 +49,37 @@ class RoutineViewModel @Inject constructor(
         return dayRoutine
     }
 
-    fun saveRutinas(nameRoutine: String,dayRoutine: Days ,exercices: List<Exercice>) {
-        listaRutinas.add(Rutina(nameRoutine,dayRoutine,exercices))
 
+
+    fun isEntryValid(itemName: String, day: Int): Boolean {
+        if (itemName.isBlank() || day!=null) {
+            return false
+        }
+        return true
     }
 
-    fun setRutina(rutina: Rutina){
-        routineInfo = rutina
+    private fun getNewItemEntry(name: String, day: Int): Rutina {
+        return Rutina(
+            name = name,
+            day = setDay(day),
+        )
+    }
+    fun addNewRoutine(routineName: String, dayRoutine: Int) {
+        val newItem = getNewItemEntry(routineName, dayRoutine)
+        insertExercices(newItem)
     }
 
 
 
+
+}
+
+class RoutineViewModelFactory(private val routineDao: RoutineDao) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(RoutineViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return RoutineViewModel(routineDao) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")    }
 }
 

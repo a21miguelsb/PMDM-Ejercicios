@@ -21,6 +21,7 @@ class NewRoutineExerciceFragment : Fragment() {
     private val binding get()= _binding!!
     private lateinit var adapter: ArrayAdapter<String>
     private val itemList = ArrayList<String>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +29,6 @@ class NewRoutineExerciceFragment : Fragment() {
         _binding= FragmentNewRoutineExerciceBinding.inflate(inflater, container, false)
         val view = binding.root
         binding.routineName.text = model.routineName.uppercase()+"("+model.dayRoutine+")"
-        var ready =false
         val btnAdd = binding.addRoutine
 
         btnAdd.setOnClickListener {
@@ -37,35 +37,35 @@ class NewRoutineExerciceFragment : Fragment() {
                 val name1 = binding.exerciceName1.text.toString()
                 val reps1 = binding.exerciceReps1.text.toString().toInt()
                 val time1 = binding.exerciceTime1.text.toString().toInt()
-                val exercice1 = createExercice(name1,reps1,time1)
+                //val exercice1 = createExercice(name1,reps1,time1)
 
 
                 val name2 = binding.exerciceName2.text.toString()
                 val reps2 = binding.exerciceReps2.text.toString().toInt()
                 val time2 = binding.exerciceTime2.text.toString().toInt()
-                val exercice2 = createExercice(name2,reps2,time2)
+                //val exercice2 = createExercice(name2,reps2,time2)
 
 
                 val name3 = binding.exerciceName3.text.toString()
                 val reps3 = binding.exerciceReps3.text.toString().toInt()
                 val time3 = binding.exerciceTime3.text.toString().toInt()
-                val exercice3 = createExercice(name3,reps3,time3)
+                //val exercice3 = createExercice(name3,reps3,time3)
 
 
                 val name4 = binding.exerciceName4.text.toString()
                 val reps4 = binding.exerciceReps4.text.toString().toInt()
                 val time4 = binding.exerciceTime4.text.toString().toInt()
-                val exercice4 = createExercice(name4,reps4,time4)
+                //val exercice4 = createExercice(name4,reps4,time4)
 
 
                 val name5 = binding.exerciceName5.text.toString()
                 val reps5 = binding.exerciceReps5.text.toString().toInt()
                 val time5 = binding.exerciceTime5.text.toString().toInt()
-                val exercice5 = createExercice(name5,reps5,time5)
+                //val exercice5 = createExercice(name5,reps5,time5)
 
-                val listaEjercicios = listOf(exercice1,exercice2,exercice3,exercice4,exercice5)
+                //val listaEjercicios = listOf(exercice1,exercice2,exercice3,exercice4,exercice5)
 
-                model.saveRutinas(model.routineName,model.dayRoutine, listaEjercicios)
+                model.saveRutinas(model.routineName,model.dayRoutine)
                 Toast.makeText(requireContext(), "Rutina añadida correctamente", Toast.LENGTH_SHORT).show()
                 view.findNavController().navigate(R.id.action_newRoutineExerciceFragment_to_routineFragment)
 
@@ -84,9 +84,7 @@ class NewRoutineExerciceFragment : Fragment() {
         return view
     }
 
-    fun createExercice(nameExercice: String,reps: Int,time: Int): Exercice {
-        return Exercice(nameExercice,reps,time)
-    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null

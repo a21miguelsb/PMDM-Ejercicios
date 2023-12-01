@@ -29,30 +29,6 @@ class RoutineInfoFragment : Fragment() {
 
 
 
-        binding.exerciceName1.text = model.routineInfo.exercices[0].name
-        binding.exerciceReps1.text= model.routineInfo.exercices[0].repetitions.toString()
-        binding.exerciceTime1.text = model.routineInfo.exercices[0].time.toString()
-
-
-        binding.exerciceName2.text = model.routineInfo.exercices[1].name
-        binding.exerciceReps2.text= model.routineInfo.exercices[1].repetitions.toString()
-        binding.exerciceTime2.text = model.routineInfo.exercices[1].time.toString()
-
-
-        binding.exerciceName3.text = model.routineInfo.exercices[2].name
-        binding.exerciceReps3.text= model.routineInfo.exercices[2].repetitions.toString()
-        binding.exerciceTime3.text = model.routineInfo.exercices[2].time.toString()
-
-
-        binding.exerciceName4.text = model.routineInfo.exercices[3].name
-        binding.exerciceReps4.text= model.routineInfo.exercices[3].repetitions.toString()
-        binding.exerciceTime4.text = model.routineInfo.exercices[3].time.toString()
-
-
-         binding.exerciceName5.text = model.routineInfo.exercices[4].name
-         binding.exerciceReps5.text= model.routineInfo.exercices[4].repetitions.toString()
-         binding.exerciceTime5.text = model.routineInfo.exercices[4].time.toString()
-
 
         return view
     }
