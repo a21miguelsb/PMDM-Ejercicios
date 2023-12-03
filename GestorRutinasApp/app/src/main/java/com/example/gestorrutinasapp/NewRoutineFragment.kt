@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.gestorrutinasapp.databinding.FragmentNewRoutineBinding
+import com.example.gestorrutinasapp.model.RoutineViewModel
+import com.example.gestorrutinasapp.model.RoutineViewModelFactory
 
 class NewRoutineFragment : Fragment() {
 
@@ -18,8 +19,9 @@ class NewRoutineFragment : Fragment() {
     val model: RoutineViewModel by activityViewModels{
         RoutineViewModelFactory(
             (activity?.application as GestorRutinasApp).databaseRoutine
-                .getRoutineDao())
-
+                .getRoutineDao(),
+            (activity?.application as GestorRutinasApp).databaseRoutine.getExerciceDao()
+        )
     }
     private val binding get()= _binding!!
     override fun onCreateView(
@@ -35,9 +37,8 @@ class NewRoutineFragment : Fragment() {
 
         btn_Next.setOnClickListener {
             if (isEntryValid()){
+                model.addNewRoutine(binding.nameText.text.toString(),binding.spinnerDias.selectedItemPosition)
 
-                model.setName(binding.nameText.text.toString())
-                model.setDay(binding.spinnerDias.selectedItemPosition )
                 view.findNavController().navigate(R.id.action_newRoutineFragment_to_newRoutineExerciceFragment)
 
             }
@@ -50,7 +51,7 @@ class NewRoutineFragment : Fragment() {
     }
     private fun isEntryValid():Boolean{
         return model.isEntryValid(
-            binding.nameText.text.toString(),
+            binding.nameText.text,
             binding.spinnerDias.selectedItemPosition
         )
     }

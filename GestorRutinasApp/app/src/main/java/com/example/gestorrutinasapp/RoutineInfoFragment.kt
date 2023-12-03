@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.gestorrutinasapp.databinding.FragmentRoutineInfoBinding
+import com.example.gestorrutinasapp.model.RoutineViewModel
 
 
 class RoutineInfoFragment : Fragment() {
@@ -22,8 +23,7 @@ class RoutineInfoFragment : Fragment() {
     ): View? {
         _binding = FragmentRoutineInfoBinding.inflate(inflater,container,false)
         val view = binding.root
-        binding.routineInfoName.text =model.routineInfo.name.uppercase()
-        binding.routineDayInfo.text = model.routineInfo.day.name.uppercase()
+
 
 
 

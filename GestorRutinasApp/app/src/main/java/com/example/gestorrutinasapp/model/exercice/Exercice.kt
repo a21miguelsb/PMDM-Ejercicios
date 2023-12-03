@@ -12,9 +12,9 @@ data class Exercice(
     @ColumnInfo(name = "name")
     val name: String,
     @ColumnInfo(name = "repetitions")
-    val repetitions: String,
+    val repetitions: Int,
     @ColumnInfo(name = "time")
-    val time: String,
+    val time: Int,
     @ColumnInfo(name ="id_routine")
     val id_routine: Int)
 
