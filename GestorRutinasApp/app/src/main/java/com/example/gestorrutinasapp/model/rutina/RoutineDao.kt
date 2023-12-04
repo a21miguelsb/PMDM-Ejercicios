@@ -10,10 +10,10 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface RoutineDao {
-    @Query("SELECT * FROM rutina_database")
+    @Query("SELECT * FROM Rutina")
     fun getAllRoutines(): Flow<List<Rutina>>
 
-    @Query("SELECT * FROM rutina_database Where name= :name and day = :day ")
+    @Query("SELECT * FROM Rutina Where name= :name and day = :day ")
     suspend fun getRutinaByNameDay(name: String,day: Days):Rutina
 
     @Insert

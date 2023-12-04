@@ -9,6 +9,7 @@ import com.example.gestorrutinasapp.model.dieta.DietaDao
 import com.example.gestorrutinasapp.model.exercice.Exercice
 import com.example.gestorrutinasapp.model.exercice.ExerciceDao
 import com.example.gestorrutinasapp.model.objetive.Objetive
+import com.example.gestorrutinasapp.model.objetive.ObjetiveDao
 import com.example.gestorrutinasapp.model.rutina.RoutineDao
 import com.example.gestorrutinasapp.model.rutina.Rutina
 
@@ -17,7 +18,7 @@ abstract class RoutineDatabase: RoomDatabase() {
     abstract fun getRoutineDao(): RoutineDao
     abstract fun getExerciceDao(): ExerciceDao
     abstract fun getDietDao(): DietaDao
-    abstract fun getObjetiveDao(): Objetive
+    abstract fun getObjetiveDao(): ObjetiveDao
 
     companion object{
         @Volatile

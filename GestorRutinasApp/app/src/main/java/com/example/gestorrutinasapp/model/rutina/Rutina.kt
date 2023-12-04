@@ -7,7 +7,7 @@ import com.example.gestorrutinasapp.model.Days
 import com.example.gestorrutinasapp.model.exercice.Exercice
 import javax.inject.Inject
 
-@Entity("rutina_database")
+@Entity()
 data class Rutina (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")

@@ -30,12 +30,10 @@ class RoutineFragment : Fragment() {
         )
 
     }
-    private val rutinas = model.allRoutines
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
 
 
 
@@ -46,13 +44,14 @@ class RoutineFragment : Fragment() {
 
             adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, itemList)
             lista.adapter = adapter
+
         if(model.allRoutines.isNotEmpty()){
             adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, itemList)
 
             lista.adapter = adapter
 
-            for (i in model.allRoutines) {
-                if (!itemList.contains(i.name)) itemList.add(i.name)
+            for (rutina in model.allRoutines) {
+                if (!itemList.contains(rutina.name)) itemList.add(rutina.name)
             }
 
             lista.setOnItemClickListener { _, _, position, _ ->

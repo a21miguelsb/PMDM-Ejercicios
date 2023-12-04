@@ -3,11 +3,16 @@ package com.example.gestorrutinasapp.model
 import android.text.Editable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asFlow
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.gestorrutinasapp.model.exercice.Exercice
 import com.example.gestorrutinasapp.model.exercice.ExerciceDao
 import com.example.gestorrutinasapp.model.rutina.RoutineDao
 import com.example.gestorrutinasapp.model.rutina.Rutina
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 
 
@@ -18,8 +23,16 @@ class RoutineViewModel(
 
     lateinit var  dayRoutine: Days
     lateinit var rutina:Rutina
-    lateinit var selectedRutine : Rutina
-    var allRoutines: List<Rutina> = emptyList()
+
+    var allRoutines = getRutinas()
+    private suspend fun getRutinas(): List<Rutina> {
+        var rutinas: MutableList<Rutina> = ArrayList()
+
+
+        return   routineDao.getAllRoutines().toList(rutinas)
+    }
+
+
 
 
     fun setDay(day: Int):Days{
@@ -36,10 +49,10 @@ class RoutineViewModel(
     }
     
     fun isEntryValid(itemName: Editable, day: Int): Boolean {
-        if (itemName.isBlank() || day==null) {
-            return false
+        if (itemName.isNotBlank() || day!=null) {
+            return true
         }
-        return true
+        return false
     }
 
     private fun getNewItemEntry(name: String, day: Int): Rutina {
@@ -55,11 +68,9 @@ class RoutineViewModel(
     }
 
     fun addNewExercice(name:String,reps: Int,time: Int) {
-        //selectedRutine= getRutinaByNameDay(rutina)
-        val newRoutine = Exercice(name =name, repetitions =reps,time= time, id_routine =  selectedRutine.id)
+        val newRoutine = Exercice(name =name, repetitions =reps,time= time, id_routine =  rutina.id)
         insertExercices(newRoutine)
     }
-
 
 
 
