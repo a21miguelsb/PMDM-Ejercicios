@@ -1,22 +1,14 @@
 package com.example.gestorrutinasapp.model
 
 import android.text.Editable
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.asLiveData
-import com.example.gestorrutinasapp.model.rutina.Rutina
-
-import kotlinx.coroutines.launch
 import androidx.lifecycle.viewModelScope
 import com.example.gestorrutinasapp.model.exercice.Exercice
 import com.example.gestorrutinasapp.model.exercice.ExerciceDao
 import com.example.gestorrutinasapp.model.rutina.RoutineDao
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.toList
-import kotlinx.coroutines.withContext
+import com.example.gestorrutinasapp.model.rutina.Rutina
+import kotlinx.coroutines.launch
 
 
 class RoutineViewModel(

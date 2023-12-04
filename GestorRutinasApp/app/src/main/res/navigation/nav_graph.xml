@@ -9,7 +9,11 @@
         android:id="@+id/dietFragment"
         android:name="com.example.gestorrutinasapp.DietFragment"
         android:label="fragment_diet"
-        tools:layout="@layout/fragment_diet" />
+        tools:layout="@layout/fragment_diet" >
+        <action
+            android:id="@+id/action_dietFragment_to_newDietFragment"
+            app:destination="@id/newDietFragment" />
+    </fragment>
     <fragment
         android:id="@+id/routineFragment"
         android:name="com.example.gestorrutinasapp.RoutineFragment"
@@ -61,4 +65,13 @@
         android:name="com.example.gestorrutinasapp.RoutineInfoFragment"
         android:label="fragment_routine_info"
         tools:layout="@layout/fragment_routine_info" />
+    <fragment
+        android:id="@+id/newDietFragment"
+        android:name="com.example.gestorrutinasapp.NewDietFragment"
+        android:label="fragment_new_diet"
+        tools:layout="@layout/fragment_new_diet" >
+        <action
+            android:id="@+id/action_newDietFragment_to_dietFragment"
+            app:destination="@id/dietFragment" />
+    </fragment>
 </navigation>
